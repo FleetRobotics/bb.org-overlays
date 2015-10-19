@@ -46,7 +46,7 @@
 		"P9.36",	/* AIN5 */
 		"P9.35",	/* AIN6 */
 		/* the hardware ip uses */
-		"tscadc";
+		"tscadc",
     "ehrpwm1A",
     "ehrpwm1B",
     "ehrpwm2A",
@@ -66,7 +66,7 @@
 
       /* P8.08 */
       P8_08_default_pin: pinmux_P9_08_default_pin {
-	      pinctrl-single, pins= <0x094  0x27>; }; /* Mode 7, Pull-Down, RxActive */
+	      pinctrl-single,pins= <0x094  0x27>; }; /* Mode 7, Pull-Down, RxActive */
       P8_08_gpio_pin: pinmux_P8_08_gpio_pin {
         pinctrl-single,pins = <0x094  0x2F>; };     /* Mode 7, RxActive */
 	    P8_08_gpio_pu_pin: pinmux_P8_08_gpio_pu_pin {
@@ -99,7 +99,6 @@
           pinctrl-single,pins = <0x098  0x27>; };     /* Mode 7, Pull-Down, RxActive */
       P8_10_timer_pin: pinmux_P8_10_timer_pin {
           pinctrl-single,pins = <0x098  0x32>; };     /* Mode 2, Pull-Up, RxActive */
-      }
 
       /* P8.11 */
       P8_11_default_pin: pinmux_P8_11_default_pin {
@@ -360,7 +359,6 @@
       pinctrl-1 = <&P9_23_gpio_pin>;
       pinctrl-2 = <&P9_23_gpio_pu_pin>;
       pinctrl-3 = <&P9_23_gpio_pd_pin>;
-      pinctrl-4 = <&P9_23_pwm_pin>;
 		  };
 
 	  P9_24_pinmux {
@@ -406,8 +404,8 @@
 		target = <&ehrpwm2>;
 		__overlay__ {
 			pinctrl-names = "default";
-			pinctrl-0 = <&bb-ehrpwm2_pins>;
+			pinctrl-0 = <&bb_ehrpwm2_pins>;
 			status = "okay";
-		}
-	}
+		};
+	};
 };
